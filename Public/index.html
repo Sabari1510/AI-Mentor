@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Virtual Mentor - Home</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <nav class="topnav">
+        <div class="logo">AI Mentor</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="learning-path.html">Learning Path</a>
+            <a href="study-materials.html">Study Materials</a>
+            <a href="career-guidance.html">Career Guidance</a>
+            <a href="faqs.html">FAQs</a>
+        </div>
+        <div class="nav-right">
+            <a href="login.html" id="login-btn">Login</a>
+            <a href="signup.html" id="signup-btn">Signup</a>
+            <span id="user-welcome" style="display: none;"></span>
+            <button id="logout-btn" style="display: none;">Logout</button>
+            <button class="theme-toggle">🌙</button>
+        </div>
+    </nav>
+
+    
+    <div class="mobile-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="learning-path.html">Learning Path</a>
+        <a href="study-materials.html">Study Materials</a>
+        <a href="career-guidance.html">Career Guidance</a>
+        <a href="faqs.html">FAQs</a>
+    </div>
+
+    <main style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: calc(100vh - 72px); text-align: center; padding: 2rem;">
+        <h1>Welcome to Your AI Virtual Mentor</h1>
+        <p>Unlock your potential with personalized learning paths, study materials, and career guidance powered by artificial intelligence.</p>
+        <a href="dashboard.html" class="cta-button">Get Started</a>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = localStorage.getItem('user');
+            if (user) {
+                document.getElementById('user-welcome').textContent = `Welcome, ${user}`;
+                document.getElementById('user-welcome').style.display = 'inline';
+                document.getElementById('logout-btn').style.display = 'inline';
+                document.getElementById('login-btn').style.display = 'none';
+                document.getElementById('signup-btn').style.display = 'none';
+            }
+
+            // Theme toggle logic
+            const themeToggle = document.querySelector('.theme-toggle');
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.body.classList.toggle('dark-theme', savedTheme === 'dark');
+            themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-theme');
+                const newTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+                localStorage.setItem('theme', newTheme);
+                themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+            });
+
+            // Mobile menu logic
+            const mobileMenuButton = document.querySelector('.mobile-menu');
+            const mobileNav = document.querySelector('.mobile-nav');
+            mobileMenuButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                mobileNav.classList.toggle('active');
+            });
+            document.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+            });
+        });
+
+        document.getElementById('logout-btn').addEventListener('click', () => {
+            localStorage.removeItem('user');
+            window.location.reload();
+        });
+    </script>
+</body>
+</html>

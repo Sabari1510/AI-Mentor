@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Virtual Mentor - Career Guidance</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/career-guidance.css">
+</head>
+<body>
+    <nav class="topnav">
+        <div class="logo">AI Mentor</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="learning-path.html">Learning Path</a>
+            <a href="study-materials.html">Study Materials</a>
+            <a href="career-guidance.html" class="active">Career Guidance</a>
+            <a href="faqs.html">FAQs</a>
+        </div>
+        <div class="nav-right">
+            <button class="theme-toggle">🌙</button>
+        </div>
+    </nav>
+
+    <button class="mobile-menu">☰</button>
+    <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="learning-path.html">Learning Path</a>
+        <a href="study-materials.html">Study Materials</a>
+        <a href="career-guidance.html" class="active">Career Guidance</a>
+        <a href="faqs.html">FAQs</a>
+    </div>
+
+    <main>
+        <h2>Career Guidance</h2>
+        <div class="interest-form">
+            <h3>Discover Your Career Path</h3>
+            <form id="career-form">
+                <div class="form-group">
+                    <label for="skills">Your Top Skills:</label>
+                    <input type="text" id="skills" placeholder="e.g., Python, Project Management, UX Design">
+                </div>
+                <div class="form-group">
+                    <label for="interests">Your Career Interests:</label>
+                    <input type="text" id="interests" placeholder="e.g., Software Development, Marketing">
+                </div>
+                <div class="form-group">
+                    <label for="experience">Professional Experience:</label>
+                    <select id="experience" name="experience">
+                        <option value="0-1">Less than 1 Year</option>
+                        <option value="1-3">1-3 Years</option>
+                        <option value="3-5">3-5 Years</option>
+                        <option value="5+">5+ Years</option>
+                    </select>
+                </div>
+                <button type="submit" class="cta-button">Explore Career Options</button>
+            </form>
+        </div>
+        <div id="career-results"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

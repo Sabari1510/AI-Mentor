@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Virtual Mentor - Study Materials</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/study-materials.css">
+</head>
+<body>
+    <nav class="topnav">
+        <div class="logo">AI Mentor</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="learning-path.html">Learning Path</a>
+            <a href="study-materials.html" class="active">Study Materials</a>
+            <a href="career-guidance.html">Career Guidance</a>
+            <a href="faqs.html">FAQs</a>
+        </div>
+        <div class="nav-right">
+            <button class="theme-toggle">🌙</button>
+        </div>
+    </nav>
+
+    <button class="mobile-menu">☰</button>
+    <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="learning-path.html">Learning Path</a>
+        <a href="study-materials.html" class="active">Study Materials</a>
+        <a href="career-guidance.html">Career Guidance</a>
+        <a href="faqs.html">FAQs</a>
+    </div>
+
+    <main>
+        <h2>Study Materials</h2>
+        <div class="study-container">
+            <div class="materials-box">
+                <div class="search-container">
+                    <input type="text" id="materials-search" placeholder="Search for topics (e.g., Python, AI)...">
+                    <button onclick="searchMaterials()" class="cta-button">Search</button>
+                </div>
+                <div class="filter-selection" style="display: none;">
+                    <h3>Select Study Material Type</h3>
+                    <button class="filter-btn" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="book">Books</button>
+                    <button class="filter-btn" data-filter="article">Articles</button>
+                    <button class="filter-btn" data-filter="course">Courses</button>
+                    <button class="filter-btn" data-filter="video">Videos</button>
+                </div>
+                <div class="placeholder-message">Enter a topic to find recommended study materials</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

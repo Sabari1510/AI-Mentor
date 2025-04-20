@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Virtual Mentor - Learning Path</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/learning-path.css">
+</head>
+<body>
+    <nav class="topnav">
+        <div class="logo">AI Mentor</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="learning-path.html" class="active">Learning Path</a>
+            <a href="study-materials.html">Study Materials</a>
+            <a href="career-guidance.html">Career Guidance</a>
+            <a href="faqs.html">FAQs</a>
+        </div>
+        <div class="nav-right">
+            <button class="theme-toggle">🌙</button>
+        </div>
+    </nav>
+
+    <button class="mobile-menu">☰</button>
+    <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="learning-path.html" class="active">Learning Path</a>
+        <a href="study-materials.html">Study Materials</a>
+        <a href="career-guidance.html">Career Guidance</a>
+        <a href="faqs.html">FAQs</a>
+    </div>
+
+    <main>
+        <h2>Your Learning Path</h2>
+        <div class="learning-path-container">
+            <div class="interest-form">
+                <h3>Create Your Learning Path</h3>
+                <form id="interest-form">
+                    <div class="form-group">
+                        <label for="skill-level">Your Current Skill Level:</label>
+                        <select id="skill-level" name="skill-level">
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="learning-goal">What Would You Like to Learn?</label>
+                        <input type="text" id="learning-goal" placeholder="e.g., Web Development, Data Science">
+                    </div>
+                    <div class="form-group">
+                        <label for="weekly-time">Weekly Time Commitment:</label>
+                        <select id="weekly-time" name="weekly-time">
+                            <option value="1-5">1-5 Hours</option>
+                            <option value="5-10">5-10 Hours</option>
+                            <option value="10+">10+ Hours</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="cta-button">Generate Learning Path</button>
+                </form>
+            </div>
+            <div class="chat-container">
+                <h3>Your Generated Learning Path</h3>
+                <div id="learning-chat-output" class="chat-output">
+                    <div class="chat-message bot">
+                        <p>Enter your learning goal, skill level, and time commitment to generate a personalized learning path!</p>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" id="learning-chat-input" placeholder="Ask about your learning path...">
+                    <button onclick="sendLearningMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

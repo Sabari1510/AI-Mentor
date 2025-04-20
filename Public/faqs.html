@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Virtual Mentor - FAQs</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/faqs.css">
+</head>
+<body>
+    <nav class="topnav">
+        <div class="logo">AI Mentor</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="learning-path.html">Learning Path</a>
+            <a href="study-materials.html">Study Materials</a>
+            <a href="career-guidance.html">Career Guidance</a>
+            <a href="faqs.html" class="active">FAQs</a>
+        </div>
+        <div class="nav-right">
+            <button class="theme-toggle">🌙</button>
+        </div>
+    </nav>
+
+    <button class="mobile-menu">☰</button>
+    <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="learning-path.html">Learning Path</a>
+        <a href="study-materials.html">Study Materials</a>
+        <a href="career-guidance.html">Career Guidance</a>
+        <a href="faqs.html" class="active">FAQs</a>
+    </div>
+
+    <main>
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-upload">
+            <h3>Generate FAQs from Your Documents</h3>
+            <p>Upload a PDF or Word file, and our AI will create 4-6 tailored FAQs based on its content.</p>
+            <input type="file" id="faq-file-upload" accept=".pdf,.doc,.docx" multiple>
+            <button class="cta-button" id="generate-faqs-btn">Upload & Generate</button>
+            <div id="generated-faqs" class="generated-faqs"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

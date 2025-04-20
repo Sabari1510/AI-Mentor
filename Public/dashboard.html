@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Virtual Mentor - Dashboard</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <nav class="topnav">
+        <div class="logo">AI Mentor</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="learning-path.html">Learning Path</a>
+            <a href="study-materials.html">Study Materials</a>
+            <a href="career-guidance.html">Career Guidance</a>
+            <a href="faqs.html">FAQs</a>
+        </div>
+        <div class="nav-right">
+            <button class="theme-toggle">🌙</button>
+        </div>
+    </nav>
+
+    <button class="mobile-menu">☰</button>
+    <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="learning-path.html">Learning Path</a>
+        <a href="study-materials.html">Study Materials</a>
+        <a href="career-guidance.html">Career Guidance</a>
+        <a href="faqs.html">FAQs</a>
+    </div>
+
+    <main>
+        <h2>Dashboard</h2>
+        <div class="dashboard-container">
+            <div class="dashboard-card">
+                <h3>Learning Progress</h3>
+                <p>You're 60% through your Web Development learning path!</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 60%;"></div>
+                </div>
+                <a href="learning-path.html" class="cta-button">Continue Learning</a>
+            </div>
+            <div class="dashboard-card">
+                <h3>Quick Links</h3>
+                <div class="quick-links">
+                    <a href="learning-path.html">Learning Path</a>
+                    <a href="study-materials.html">Study Materials</a>
+                    <a href="career-guidance.html">Career Guidance</a>
+                    <a href="faqs.html">FAQs</a>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <h3>Recent Activity</h3>
+                <div class="recent-activity">
+                    <div class="activity-item">
+                        <p>Completed "HTML Basics" lesson</p>
+                        <span>March 20, 2025</span>
+                    </div>
+                    <div class="activity-item">
+                        <p>Searched for "JavaScript Tutorials"</p>
+                        <span>March 19, 2025</span>
+                    </div>
+                    <div class="activity-item">
+                        <p>Generated career recommendations</p>
+                        <span>March 18, 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

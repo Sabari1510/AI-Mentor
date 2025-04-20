@@ -8,6 +8,7 @@
     border: 1px solid var(--border-color);
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, background-color var(--transition-speed) ease;
 }
+<<<<<<< HEAD
 .one-to-one-section {
     margin-top: 2rem;
     padding: 1.5rem;
@@ -33,6 +34,9 @@
     border: 1px solid var(--border-color);
     border-radius: 4px;
 }
+=======
+
+>>>>>>> 88703c34c8f34bf16c862a0a844d9b370f8becf4
 .interest-form:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);

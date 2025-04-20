@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "axios": "^1.8.4",
+<<<<<<< HEAD
+    "bcrypt": "^5.1.1",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "express-validator": "^7.2.1",
+    "googleapis": "^148.0.0",
+    "groq-sdk": "^0.17.0",
+    "mammoth": "^1.9.0",
+    "mongoose": "^8.13.0",
+=======
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "googleapis": "^148.0.0",
+    "groq-sdk": "^0.17.0",
+    "mammoth": "^1.9.0",
+>>>>>>> 0a5ebd43909b1105ec3a0f86f4bc08c78cc281f6
+    "multer": "^1.4.5-lts.2",
+    "pdf-parse": "^1.1.1"
+  }
+}

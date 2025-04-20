@@ -4,6 +4,171 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+/* Existing styles from your common.css remain unchanged, adding/updating only button styles below */
+
+/* Base styles for nav-right buttons/links */
+.nav-right a, .nav-right button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all var(--transition-speed) ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Specific styles for Login button */
+#login-btn {
+    background-color: var(--surface-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    outline-width: 10px;
+    margin-right: 1rem;
+}
+
+
+#login-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    outline-width: 10px;
+}
+
+#login-btn:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+    outline-width: 10px;
+    margin-right: 10rem;
+}
+
+#login-btn:hover:after {
+    width: 200%;
+    height: 200%;
+    outline-width: 10px;
+    margin-right: 10rem;
+}
+
+/* Specific styles for Signup button */
+#signup-btn {
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+    border: none;
+    margin-right: 1rem;
+}
+
+#signup-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+#signup-btn:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+#signup-btn:hover:after {
+    width: 200%;
+    height: 200%;
+}
+
+/* Specific styles for Logout button */
+#logout-btn {
+    background-color: var(--surface-color);
+    color: #EF4444; /* Red for logout, distinct action */
+    border: 1px solid #EF4444;
+    margin-left: 1rem;
+}
+
+#logout-btn:hover {
+    background-color: #EF4444;
+    color: var(--surface-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+#logout-btn:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+#logout-btn:hover:after {
+    width: 200%;
+    height: 200%;
+}
+
+/* Dark theme adjustments */
+body.dark-theme .nav-right a, body.dark-theme .nav-right button {
+    box-shadow: var(--shadow-sm); /* Maintain shadow in dark mode */
+}
+
+body.dark-theme #login-btn {
+    background-color: var(--dark-surface);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+body.dark-theme #login-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--dark-surface);
+}
+
+body.dark-theme #signup-btn {
+    background-color: var(--primary-color);
+    color: var(--dark-surface);
+}
+
+body.dark-theme #signup-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+body.dark-theme #logout-btn {
+    background-color: var(--dark-surface);
+    color: #FCA5A5; /* Lighter red for dark mode */
+    border-color: #FCA5A5;
+}
+
+body.dark-theme #logout-btn:hover {
+    background-color: #FCA5A5;
+    color: var(--dark-surface);
+}
+=======
+>>>>>>> 0a5ebd43909b1105ec3a0f86f4bc08c78cc281f6
+>>>>>>> 88703c34c8f34bf16c862a0a844d9b370f8becf4
 
 :root {
     --primary-color: #5436DA;
@@ -152,6 +317,13 @@ body.dark-theme {
     padding: 0.5rem;
     border-radius: 6px;
     transition: all var(--transition-speed) ease;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    margin-left: 1rem;
+=======
+>>>>>>> 0a5ebd43909b1105ec3a0f86f4bc08c78cc281f6
+>>>>>>> 88703c34c8f34bf16c862a0a844d9b370f8becf4
 }
 
 .theme-toggle:hover {

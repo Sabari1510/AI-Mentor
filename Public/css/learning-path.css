@@ -1,0 +1,183 @@
+.learning-path-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    transition: grid-template-columns var(--transition-speed) ease;
+}
+
+.learning-path-container.conversation-active {
+    grid-template-columns: 0.6fr 1.4fr;
+}
+
+.interest-form, .chat-container {
+    background-color: var(--card-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, background-color var(--transition-speed) ease;
+}
+
+.interest-form:hover, .chat-container:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.learning-path-container.conversation-active .interest-form {
+    transform: translateX(-10px);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: slideInForm 0.5s ease-out forwards;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes slideInForm {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: color var(--transition-speed) ease;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--input-color);
+    color: var(--text-color);
+    font-size: 0.95rem;
+    transition: all var(--transition-speed) ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(42, 67, 101, 0.15);
+}
+
+.chat-container {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    transition: height var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.chat-container.expanded {
+    height: 650px;
+}
+
+.chat-output {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: var(--input-color);
+    margin-bottom: 1rem;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.chat-message {
+    margin-bottom: 1rem;
+    max-width: 90%;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    box-shadow: var(--shadow-sm);
+    opacity: 0;
+    transform: translateY(10px);
+    animation: slideInChat 0.3s ease-out forwards;
+}
+
+@keyframes slideInChat {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-message.user {
+    margin-left: auto;
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+}
+
+.chat-message.bot {
+    margin-right: auto;
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+
+.chat-input-container {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.chat-input-container input {
+    flex: 1;
+    padding: 0.9rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--input-color);
+    color: var(--text-color);
+    font-size: 0.95rem;
+    transition: all var(--transition-speed) ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.chat-input-container input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(42, 67, 101, 0.15);
+}
+
+.chat-input-container button {
+    padding: 0.9rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.chat-input-container button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 1200px) {
+    .learning-path-container {
+        grid-template-columns: 1fr;
+    }
+    .learning-path-container.conversation-active {
+        grid-template-columns: 1fr;
+    }
+    .learning-path-container.conversation-active .interest-form {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .chat-container {
+        height: 350px;
+    }
+    .chat-container.expanded {
+        height: 500px;
+    }
+}

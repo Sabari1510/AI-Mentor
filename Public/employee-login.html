@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Login - AI Virtual Mentor</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/employee-login.css">
+    <script src="https://meet.jit.si/external_api.js"></script>
+</head>
+<body>
+    <nav class="topnav">
+        <div class="logo">AI Mentor</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="learning-path.html">Learning Path</a>
+            <a href="study-materials.html">Study Materials</a>
+            <a href="career-guidance.html">Career Guidance</a>
+            <a href="faqs.html">FAQs</a>
+            <a href="employee-login.html" class="active">Employee Login</a>
+        </div>
+        <div class="nav-right">
+            <button class="theme-toggle">🌙</button>
+        </div>
+    </nav>
+
+    <button class="mobile-menu">☰</button>
+    <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="learning-path.html">Learning Path</a>
+        <a href="study-materials.html">Study Materials</a>
+        <a href="career-guidance.html">Career Guidance</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="employee-login.html" class="active">Employee Login</a>
+    </div>
+
+    <main>
+        <h2>Employee Dashboard</h2>
+        <div id="appointments-container">
+            <h3>Available Appointments</h3>
+            <div id="appointments-list"></div>
+            <div id="video-call-container" style="display: none;">
+                <h4>Active Consultation</h4>
+                <div id="jitsi-meeting"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

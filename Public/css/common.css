@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
+<<<<<<< HEAD
 /* Existing styles from your common.css remain unchanged, adding/updating only button styles below */
 
 /* Base styles for nav-right buttons/links */
@@ -163,6 +164,8 @@ body.dark-theme #logout-btn:hover {
     background-color: #FCA5A5;
     color: var(--dark-surface);
 }
+=======
+>>>>>>> 0a5ebd43909b1105ec3a0f86f4bc08c78cc281f6
 
 :root {
     --primary-color: #5436DA;
@@ -311,7 +314,10 @@ body.dark-theme {
     padding: 0.5rem;
     border-radius: 6px;
     transition: all var(--transition-speed) ease;
+<<<<<<< HEAD
     margin-left: 1rem;
+=======
+>>>>>>> 0a5ebd43909b1105ec3a0f86f4bc08c78cc281f6
 }
 
 .theme-toggle:hover {

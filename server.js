@@ -1,9 +1,13 @@
 require('dotenv').config();
 
 const express = require('express');
+<<<<<<< HEAD
 const mongoose = require('mongoose');
 const session = require('express-session');
 const bcrypt = require('bcrypt');
+=======
+const Groq = require('groq-sdk');
+>>>>>>> 0a5ebd43909b1105ec3a0f86f4bc08c78cc281f6
 const path = require('path');
 const multer = require('multer');
 const fs = require('fs');
@@ -16,6 +20,7 @@ const { google } = require('googleapis');
 const app = express();
 const port = process.env.PORT || 3000;
 
+<<<<<<< HEAD
 // MongoDB Connection
 mongoose.connect('mongodb://localhost:27017/userAuth', {
     useNewUrlParser: true,
@@ -95,11 +100,52 @@ app.get('/session', (req, res) => {
 });
 
 // Serve index.html
+=======
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
+
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+const upload = multer({ dest: 'uploads/' });
+const youtube = google.youtube({ version: 'v3', auth: process.env.YOUTUBE_API_KEY });
+
+// Middleware to validate incoming requests
+const validateInput = (req, res, next) => {
+    const { interest, topic, message, skills, learningGoal, interests, experience } = req.body;
+    if (!interest && !topic && !message && !skills && !learningGoal && !interests && !experience) {
+        return res.status(400).json({ 
+            error: 'Missing required input parameters',
+            message: 'Please provide at least one of: interest, topic, message, skills, learningGoal, interests, or experience'
+        });
+    }
+    if (req.path === '/api/chat' && !message) {
+        return res.status(400).json({ 
+            error: 'Missing required input',
+            message: 'Please provide a message for the chatbot'
+        });
+    }
+    next();
+};
+
+// Error handling middleware
+const errorHandler = (err, req, res, next) => {
+    console.error('API Error:', err);
+    res.status(500).json({ 
+        error: 'Server error', 
+        message: process.env.NODE_ENV === 'production' ? 'An unexpected error occurred' : err.message 
+    });
+};
+
+// Serve the main HTML file
+>>>>>>> 0a5ebd43909b1105ec3a0f86f4bc08c78cc281f6
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+<<<<<<< HEAD
 // Learning Paths Endpoint
+=======
+// Learning Paths Endpoint (unchanged)
+>>>>>>> 0a5ebd43909b1105ec3a0f86f4bc08c78cc281f6
 app.post('/api/learning-paths', validateInput, async (req, res, next) => {
     const { interest, skill = 'beginner', time = '5-10' } = req.body;
     try {
@@ -113,7 +159,11 @@ app.post('/api/learning-paths', validateInput, async (req, res, next) => {
                     For each step, provide a title and 3-5 specific subtopics or lessons.
                     Consider the user's skill level (${skill}) and available time (${time} hours per week).
                     Format your response for easy parsing, with clear step titles followed by subtopics.
+<<<<<<< HEAD
                     The current date is March 26, 2025.` 
+=======
+                    The current date is March 23, 2025.` 
+>>>>>>> 0a5ebd43909b1105ec3a0f86f4bc08c78cc281f6
                 },
                 { role: 'user', content: `Create a detailed learning path for ${interest || 'general studies'}` }
             ],
@@ -160,6 +210,7 @@ app.post('/api/learning-paths', validateInput, async (req, res, next) => {
 });
 
 // Study Materials Endpoint
+<<<<<<< HEAD
 app.post('/api/study-materials', validateInput, async (req, res, next) => {
     const { topic, filter = 'all' } = req.body;
 
@@ -397,6 +448,12 @@ app.post('/api/career-guidance', validateInput, async (req, res, next) => {
 });
 
 // Chat Endpoint
+=======
+a
+// Career Guidance Endpoint (unchanged)
+
+// Chat Endpoint (unchanged)
+>>>>>>> 0a5ebd43909b1105ec3a0f86f4bc08c78cc281f6
 app.post('/api/chat', validateInput, async (req, res, next) => {
     const { message, learningGoal } = req.body;
     try {
@@ -413,7 +470,11 @@ app.post('/api/chat', validateInput, async (req, res, next) => {
                 2. Explain the benefits of that learning approach
                 3. Explain how they can apply what they learn
                 Keep your tone friendly, encouraging, and motivational.
+<<<<<<< HEAD
                 The current date is March 26, 2025.` 
+=======
+                The current date is March 23, 2025.` 
+>>>>>>> 0a5ebd43909b1105ec3a0f86f4bc08c78cc281f6
             },
             ...chatHistory.map(msg => ({ role: msg.role, content: msg.content })),
             { role: 'user', content: message }
@@ -436,6 +497,7 @@ app.post('/api/chat', validateInput, async (req, res, next) => {
     }
 });
 
+<<<<<<< HEAD
 // FAQ Upload Endpoint
 app.post('/api/faq-upload', upload.array('files'), async (req, res, next) => {
     try {
@@ -528,6 +590,8 @@ app.post('/api/faq-upload', upload.array('files'), async (req, res, next) => {
         next(error);
     }
 });
+=======
+>>>>>>> 0a5ebd43909b1105ec3a0f86f4bc08c78cc281f6
 
 // Apply error handling middleware
 app.use(errorHandler);

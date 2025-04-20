@@ -598,5 +598,5 @@ app.use(errorHandler);
 
 // Start the server
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+    console.log(`Visit at http://localhost:${port}`);
 });

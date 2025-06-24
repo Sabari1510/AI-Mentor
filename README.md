@@ -1,7 +1,7 @@
-# AI Mentor Hackbuzz
+# AI Mentor Yedu
 
 ## Project Overview
-AI Mentor Hackbuzz is a comprehensive web application designed to provide users with career guidance, learning paths, study materials, and various resources to support their professional development. The platform includes multiple interactive pages for different user roles, such as employees and learners, and offers a seamless user experience through well-structured navigation and resource management.
+AI Mentor Yedu is a comprehensive web application designed to provide users with career guidance, learning paths, study materials, and various resources to support their professional development. The platform includes multiple interactive pages for different user roles, such as employees and learners, and offers a seamless user experience through well-structured navigation and resource management.
 
 ## Features
 - Career guidance and counseling pages
@@ -109,4 +109,4 @@ AI Mentor Hackbuzz is a comprehensive web application designed to provide users 
 
 ## Contact and Support
 
-For questions, issues, or contributions, please contact the project maintainer or open an issue on the GitHub repository.
+For questions, issues, or contributions, please contact the sabariramramprakashprema.23cse@kongu.edu or open an issue on the GitHub repository.

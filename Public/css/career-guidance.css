@@ -1,0 +1,126 @@
+.interest-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background-color: var(--card-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, background-color var(--transition-speed) ease;
+}
+<<<<<<< HEAD
+.one-to-one-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.one-to-one-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+#appointment-result {
+    margin-top: 1rem;
+}
+
+#video-call-container {
+    margin-top: 1rem;
+}
+
+#jitsi-meeting {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+=======
+
+>>>>>>> 88703c34c8f34bf16c862a0a844d9b370f8becf4
+.interest-form:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: slideInForm 0.5s ease-out forwards;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes slideInForm {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: color var(--transition-speed) ease;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--input-color);
+    color: var(--text-color);
+    font-size: 0.95rem;
+    transition: all var(--transition-speed) ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(42, 67, 101, 0.15);
+}
+
+#career-results {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: var(--card-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: opacity var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.career-card {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-speed) ease;
+}
+
+.career-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.career-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.career-card p {
+    color: var(--muted-color);
+    font-size: 0.95rem;
+}
+
+.career-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}

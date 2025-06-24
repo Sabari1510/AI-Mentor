@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+    <title>AI Virtual Mentor</title>
+    <link rel="stylesheet" href="css/common.css">
+=======
+    <title>AI Virtual Mentor - Home</title>
+    <link rel="stylesheet" href="css/common.css">
+<<<<<<< HEAD
+    <link rel="stylesheet" href="css/dashboard.css">
+=======
+>>>>>>> 0a5ebd43909b1105ec3a0f86f4bc08c78cc281f6
+>>>>>>> 88703c34c8f34bf16c862a0a844d9b370f8becf4
+</head>
+<body>
+    <nav class="topnav">
+        <div class="logo">AI Mentor</div>
+<<<<<<< HEAD
+        <div class="nav-links" id="nav-links">
+=======
+        <div class="nav-links">
+>>>>>>> 88703c34c8f34bf16c862a0a844d9b370f8becf4
+            <a href="index.html" class="active">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="learning-path.html">Learning Path</a>
+            <a href="study-materials.html">Study Materials</a>
+            <a href="career-guidance.html">Career Guidance</a>
+            <a href="faqs.html">FAQs</a>
+        </div>
+        <div class="nav-right">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <a href="login.html" id="login-btn">Login</a>
+            <a href="signup.html" id="signup-btn">Signup</a>
+            <span id="user-welcome" style="display: none;"></span>
+            <button id="logout-btn" style="display: none;">Logout</button>
+=======
+>>>>>>> 0a5ebd43909b1105ec3a0f86f4bc08c78cc281f6
+>>>>>>> 88703c34c8f34bf16c862a0a844d9b370f8becf4
+            <button class="theme-toggle">🌙</button>
+        </div>
+    </nav>
+
+<<<<<<< HEAD
+    <div class="mobile-nav" id="mobile-nav">
+=======
+<<<<<<< HEAD
+    
+=======
+    <button class="mobile-menu">☰</button>
+>>>>>>> 0a5ebd43909b1105ec3a0f86f4bc08c78cc281f6
+    <div class="mobile-nav">
+>>>>>>> 88703c34c8f34bf16c862a0a844d9b370f8becf4
+        <a href="index.html" class="active">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="learning-path.html">Learning Path</a>
+        <a href="study-materials.html">Study Materials</a>
+        <a href="career-guidance.html">Career Guidance</a>
+        <a href="faqs.html">FAQs</a>
+    </div>
+
+<<<<<<< HEAD
+    <main>
+        <h1 id="welcome-message">Welcome to AI Virtual Mentor</h1>
+        <p id="intro-text">Your personalized learning and career guidance platform.</p>
+        <div id="post-login-content" style="margin-top: 20px;">
+            <h2>Your Next Steps</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="dashboard.html" class="cta-button">Visit Dashboard</a></li>
+                <li><a href="learning-path.html" class="cta-button">Explore Learning Paths</a></li>
+                <li><a href="career-guidance.html" class="cta-button">Get Career Guidance</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+=======
+<<<<<<< HEAD
+    <main style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: calc(100vh - 72px); text-align: center; padding: 2rem;">
+        <h1>Welcome to Your AI Virtual Mentor</h1>
+        <p>Unlock your potential with personalized learning paths, study materials, and career guidance powered by artificial intelligence.</p>
+        <a href="dashboard.html" class="cta-button">Get Started</a>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = localStorage.getItem('user');
+            if (user) {
+                document.getElementById('user-welcome').textContent = `Welcome, ${user}`;
+                document.getElementById('user-welcome').style.display = 'inline';
+                document.getElementById('logout-btn').style.display = 'inline';
+                document.getElementById('login-btn').style.display = 'none';
+                document.getElementById('signup-btn').style.display = 'none';
+            }
+
+            // Theme toggle logic
+            const themeToggle = document.querySelector('.theme-toggle');
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.body.classList.toggle('dark-theme', savedTheme === 'dark');
+            themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-theme');
+                const newTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+                localStorage.setItem('theme', newTheme);
+                themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+            });
+
+            // Mobile menu logic
+            const mobileMenuButton = document.querySelector('.mobile-menu');
+            const mobileNav = document.querySelector('.mobile-nav');
+            mobileMenuButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                mobileNav.classList.toggle('active');
+            });
+            document.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+            });
+        });
+
+        document.getElementById('logout-btn').addEventListener('click', () => {
+            localStorage.removeItem('user');
+            window.location.reload();
+        });
+    </script>
+=======
+    <main><center>
+        <div class="hero">
+            <h1>Your AI-Powered Learning Assistant</h1>
+            <p>Welcome to your personalized AI mentor—designed to guide you through your educational journey with tailored learning paths and career advice.</p>
+            <a href="learning-path.html" class="cta-button">Start Learning</a>
+        </div></center>
+    </main>
+
+    <script src="script.js"></script>
+>>>>>>> 0a5ebd43909b1105ec3a0f86f4bc08c78cc281f6
+>>>>>>> 88703c34c8f34bf16c862a0a844d9b370f8becf4
+</body>
+</html>

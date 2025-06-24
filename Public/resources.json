@@ -1,0 +1,134 @@
+{
+    "python": [
+        {
+            "title": "Python Crash Course",
+            "description": "A comprehensive book covering Python basics to advanced topics, ideal for hands-on learners.",
+            "url": "https://nostarch.com/pythoncrashcourse2e",
+            "type": "book",
+            "level": "beginner"
+        },
+        {
+            "title": "CS50’s Introduction to Python",
+            "description": "A free course from Harvard teaching Python fundamentals with practical projects.",
+            "url": "https://cs50.harvard.edu/python",
+            "type": "course",
+            "level": "beginner"
+        },
+        {
+            "title": "Automate the Boring Stuff with Python",
+            "description": "A practical book teaching Python for automation tasks, great for real-world applications.",
+            "url": "https://automatetheboringstuff.com",
+            "type": "book",
+            "level": "beginner"
+        },
+        {
+            "title": "Python for Data Analysis",
+            "description": "A book focused on using Python for data science with libraries like Pandas and NumPy.",
+            "url": "https://www.oreilly.com/library/view/python-for-data/9781491957653/",
+            "type": "book",
+            "level": "intermediate"
+        },
+        {
+            "title": "Real Python Tutorials",
+            "description": "A collection of in-depth articles on Python programming for all skill levels.",
+            "url": "https://realpython.com",
+            "type": "article",
+            "level": "intermediate"
+        },
+        {
+            "title": "Advanced Python Programming",
+            "description": "A course covering advanced Python concepts like decorators and concurrency.",
+            "url": "https://www.udemy.com/course/advanced-python-programming/",
+            "type": "course",
+            "level": "advanced"
+        }
+    ],
+    "ai": [
+        {
+            "title": "Deep Learning Specialization",
+            "description": "A Coursera series by Andrew Ng on deep learning concepts and applications.",
+            "url": "https://www.coursera.org/specializations/deep-learning",
+            "type": "course",
+            "level": "intermediate"
+        },
+        {
+            "title": "Artificial Intelligence: A Modern Approach",
+            "description": "A foundational book covering AI theory and practice, widely used in academia.",
+            "url": "http://aima.cs.berkeley.edu",
+            "type": "book",
+            "level": "intermediate"
+        },
+        {
+            "title": "AI Trends in 2025",
+            "description": "An article exploring current AI innovations and their impact as of 2025.",
+            "url": "https://www.forbes.com/ai-trends-2025",
+            "type": "article",
+            "level": "beginner"
+        },
+        {
+            "title": "Fast.ai Practical Deep Learning",
+            "description": "A free course teaching practical AI and deep learning with a top-down approach.",
+            "url": "https://course.fast.ai",
+            "type": "course",
+            "level": "intermediate"
+        },
+        {
+            "title": "Neural Networks and Deep Learning",
+            "description": "A free online book explaining neural network fundamentals.",
+            "url": "http://neuralnetworksanddeeplearning.com",
+            "type": "book",
+            "level": "advanced"
+        },
+        {
+            "title": "The AI Revolution Explained",
+            "description": "An article breaking down AI’s evolution and future directions.",
+            "url": "https://www.wired.com/story/ai-revolution-explained",
+            "type": "article",
+            "level": "beginner"
+        }
+    ],
+    "web development": [
+        {
+            "title": "The Odin Project",
+            "description": "A free, open-source curriculum for learning full-stack web development.",
+            "url": "https://www.theodinproject.com",
+            "type": "course",
+            "level": "beginner"
+        },
+        {
+            "title": "Eloquent JavaScript",
+            "description": "A modern book on JavaScript programming, available free online.",
+            "url": "https://eloquentjavascript.net",
+            "type": "book",
+            "level": "beginner"
+        },
+        {
+            "title": "MDN Web Docs",
+            "description": "A comprehensive resource with articles and tutorials on web technologies.",
+            "url": "https://developer.mozilla.org/en-US/docs/Web",
+            "type": "article",
+            "level": "intermediate"
+        },
+        {
+            "title": "Full Stack Open",
+            "description": "A free course on modern web development with React, Node.js, and more.",
+            "url": "https://fullstackopen.com",
+            "type": "course",
+            "level": "intermediate"
+        },
+        {
+            "title": "CSS: The Definitive Guide",
+            "description": "A detailed book on mastering CSS for web design.",
+            "url": "https://www.oreilly.com/library/view/css-the-definitive/9781449325053/",
+            "type": "book",
+            "level": "advanced"
+        },
+        {
+            "title": "Web Performance in 2025",
+            "description": "An article on optimizing web applications for speed and efficiency.",
+            "url": "https://www.smashingmagazine.com/web-performance-2025",
+            "type": "article",
+            "level": "advanced"
+        }
+    ]
+}
